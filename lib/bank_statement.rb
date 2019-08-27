@@ -1,10 +1,10 @@
 class BankStatement
-
+attr_reader :transactions
   def initialize
-    @transictions = []
+    @transactions = []
   end
 
-  def add_transiction(transiction)
-    
+  def add_transaction(transaction)
+     @transactions << "#{transaction.description}"
   end
 end

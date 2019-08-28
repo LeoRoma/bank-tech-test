@@ -2,8 +2,9 @@ require 'bank_statement'
 
 describe BankStatement do
 let(:statement) { BankStatement.new }
-let(:transaction1) { BankTransaction.new }
-let(:transaction2) { BankTransaction.new }
+let(:client) { BankAccount.new }
+let(:transaction1) { BankTransaction.new(client) }
+let(:transaction2) { BankTransaction.new(client) }
 
   describe '#add_transaction' do
     it "updates the transaction of the deposit into a list" do

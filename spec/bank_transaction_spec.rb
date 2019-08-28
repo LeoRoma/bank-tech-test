@@ -1,16 +1,13 @@
 require 'bank_transaction'
 
 describe BankTransaction do
-let(:transaction) { BankTransaction.new }
-
-  it 'has a current balance' do
-    expect(transaction.current_balance).to eq 0
-  end
+let(:client) { BankAccount.new }
+let(:transaction) { BankTransaction.new(client) }
 
   describe "#deposit" do
     it 'gives the possibility to deposit a certain amount of money' do
       transaction.deposit(100)
-      expect(transaction.current_balance).to eq 100
+      expect(client.current_balance).to eq 100
     end
 
     it 'add the description of the completed transaction' do
@@ -23,7 +20,7 @@ let(:transaction) { BankTransaction.new }
     it 'gives the possibility to withdraw a certain amount of money' do
       transaction.deposit(100)
       transaction.withdrawal(50)
-      expect(transaction.current_balance).to eq 50
+      expect(client.current_balance).to eq 50
     end
 
     it 'add the description of the completed transaction' do

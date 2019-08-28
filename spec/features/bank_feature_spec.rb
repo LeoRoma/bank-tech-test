@@ -13,4 +13,12 @@ let(:transaction) { BankTransaction.new(client) }
       expect(client.current_balance).to eq 100
     end
   end
+
+  describe "#withdrawal" do
+    it 'able to withdraw money' do
+      transaction.deposit(100)
+      transaction.withdrawal(20)
+      expect(client.current_balance).to eq 80
+    end
+  end
 end

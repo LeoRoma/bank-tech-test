@@ -1,5 +1,6 @@
 class BankStatement
 attr_reader :transactions
+
   def initialize
     @transactions = ["date || credit || debit || balance"]
   end
@@ -8,7 +9,7 @@ attr_reader :transactions
      @transactions << "#{transaction.description}"
   end
 
-  def print
+  def show
     @transactions.each do |transaction|
       transaction
     end

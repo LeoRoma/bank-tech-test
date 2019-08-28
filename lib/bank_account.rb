@@ -1,3 +1,5 @@
+require 'bank_statement'
+
 class BankAccount
 attr_accessor :current_balance
 
@@ -5,5 +7,7 @@ attr_accessor :current_balance
     @current_balance = 0
   end
 
-
+  def print(statement)
+    statement.show
+  end
 end

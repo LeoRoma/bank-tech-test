@@ -3,6 +3,7 @@ require 'bank_transaction'
 describe BankTransaction do
 let(:client) { BankAccount.new }
 let(:transaction) { BankTransaction.new(client) }
+current_time = Time.now.strftime("%d:%m:%Y")
 
   describe "#deposit" do
     it 'gives the possibility to deposit a certain amount of money' do
@@ -12,7 +13,7 @@ let(:transaction) { BankTransaction.new(client) }
 
     it 'add the description of the completed transaction' do
       transaction.deposit(1000)
-      expect(transaction.description).to eq "10/01/2012 || 1000 || || 1000"
+      expect(transaction.description).to eq "#{current_time} || 1000 || || 1000"
     end
   end
 
@@ -26,7 +27,7 @@ let(:transaction) { BankTransaction.new(client) }
     it 'add the description of the completed transaction' do
       transaction.deposit(3000)
       transaction.withdrawal(500)
-      expect(transaction.description).to include "14/01/2012 || || 500 || 2500"
+      expect(transaction.description).to include "#{current_time} || || 500 || 2500"
     end
   end
 

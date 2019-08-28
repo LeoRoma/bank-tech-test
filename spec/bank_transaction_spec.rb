@@ -13,7 +13,7 @@ current_time = Time.now.strftime("%d:%m:%Y")
 
     it 'add the description of the completed transaction' do
       transaction.deposit(1000)
-      expect(transaction.description).to eq "#{current_time} || 1000 || || 1000"
+      expect(transaction.description).to eq "#{current_time} || 1000.00 || || 1000.00"
     end
   end
 
@@ -27,7 +27,7 @@ current_time = Time.now.strftime("%d:%m:%Y")
     it 'add the description of the completed transaction' do
       transaction.deposit(3000)
       transaction.withdrawal(500)
-      expect(transaction.description).to include "#{current_time} || || 500 || 2500"
+      expect(transaction.description).to include "#{current_time} || || 500.00 || 2500.00"
     end
   end
 

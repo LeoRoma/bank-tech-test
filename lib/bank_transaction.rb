@@ -7,14 +7,17 @@ attr_reader :description
   end
 
   def deposit(amount)
-    # p amount_float = '%.2f' % amount
+    amount_float = '%.2f' % amount
     @client.current_balance += amount
-    @description << "#{current_time} || #{amount} || || #{@client.current_balance}"
+    balance_float = '%.2f' %  @client.current_balance
+    @description << "#{current_time} || #{amount_float} || || #{balance_float}"
   end
 
   def withdrawal(amount)
+    amount_float = '%.2f' % amount
     @client.current_balance -= amount
-    @description << "#{current_time} || || #{amount} || #{@client.current_balance}"
+    balance_float = '%.2f' %  @client.current_balance
+    @description << "#{current_time} || || #{amount_float} || #{balance_float}"
   end
 
   private

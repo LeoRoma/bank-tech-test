@@ -9,7 +9,7 @@ attr_reader :transactions
      @transactions << "#{transaction.description}"
   end
 
-  def show
+  def print
     @transactions.each do |transaction|
       transaction
     end

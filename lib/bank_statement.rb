@@ -14,4 +14,5 @@ attr_reader :transactions
       transaction
     end
   end
+
 end

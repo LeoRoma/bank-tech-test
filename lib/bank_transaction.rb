@@ -20,7 +20,7 @@ attr_reader :description
     @description << "#{current_time} || || #{amount_float} || #{balance_float}"
   end
 
-  private
+private
 
   def current_time
     t = Time.now.strftime("%d:%m:%Y")

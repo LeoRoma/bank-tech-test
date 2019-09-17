@@ -23,19 +23,19 @@ Test: rspec, simplecov
 For this program I used 3 classes with the corresponding methods:
 
 - BankAccount
-- # current_balance
+- #current_balance
 
 - BankTransaction
-- # description
-- # deposit
-- # withdrawal
+ #description
+ #deposit
+ #withdrawal
   private
-- # current_time  
+ #current_time  
 
 - BankStatement
-- # transactions
-- # add_transaction
-- # print
+ #transactions
+ #add_transaction
+ #print
 
 # Approach
 

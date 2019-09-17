@@ -27,8 +27,7 @@ let(:transaction2) { BankTransaction.new(client) }
     it 'adds transaction into statement' do
       allow(transaction1).to receive(:description) { "10/01/2012 || 1000 || || 1000" }
       statement.add_transaction(transaction1)
-      expect(statement.transactions).to eq ["date || credit || debit || balance",
-                                    "10/01/2012 || 1000 || || 1000"]
+      expect(statement.transactions).to eq ["10/01/2012 || 1000 || || 1000"]
     end
   end
 
@@ -39,8 +38,9 @@ let(:transaction2) { BankTransaction.new(client) }
       allow(transaction2).to receive(:description) { "14/01/2012 || || 500 || 2500" }
       statement.add_transaction(transaction2)
       expect(statement.print).to eq ["date || credit || debit || balance",
-                                    "10/01/2012 || 1000 || || 1000",
-                                    "14/01/2012 || || 500 || 2500"]
+                                    "14/01/2012 || || 500 || 2500",
+                                    "10/01/2012 || 1000 || || 1000"
+                                    ]
     end
   end
 end

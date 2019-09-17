@@ -2,16 +2,17 @@ class BankStatement
 attr_reader :transactions
 
   def initialize
-    @transactions = ["date || credit || debit || balance"]
+    @transactions = []
   end
 
   def add_transaction(transaction)
-     @transactions << "#{transaction.description}"
+    @transactions << "#{transaction.description}"
   end
 
   def print
-    @transactions.each do |transaction|
-      transaction
+    @transactions << "date || credit || debit || balance"
+    @transactions.reverse.each do |transaction|
+      puts transaction
     end
   end
 

@@ -48,4 +48,6 @@ For this program I used 3 classes with the corresponding methods:
 
 # Approach
 
+# Picture of an example in IRB
 
+<img src="./images/Screenshot 2019-09-18 at 10.36.47.png" width="786" height="522">

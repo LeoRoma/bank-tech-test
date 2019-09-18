@@ -23,6 +23,6 @@ attr_reader :description
 private
 
   def current_time
-    t = Time.now.strftime("%d:%m:%Y")
+    t = Time.now.strftime("%d/%m/%Y")
   end
 end

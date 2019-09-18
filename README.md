@@ -18,7 +18,7 @@ Bundle install.
 ```
 require './lib/bank_account'
 require './lib/bank_statement'
-require './lib/bank_transactions'
+require './lib/bank_transaction'
 ```
 
 # Tech and test

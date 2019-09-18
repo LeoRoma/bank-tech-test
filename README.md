@@ -31,17 +31,17 @@ require './lib/bank_transaction'
 
 For this program I used 3 classes with the corresponding methods:
 
-## BankAccount
+### BankAccount
 - current_balance
 
-## BankTransaction
+### BankTransaction
 - description
 - deposit
 - withdrawal
 - private
 - current_time  
 
-## BankStatement
+### BankStatement
 - transactions
 - add_transaction
 - print

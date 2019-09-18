@@ -11,14 +11,21 @@ Open your terminal/command line.
 Clone the repository with: git clone https://github.com/LeoRoma/bank-tech-test.git
 Go into the folder: cd bank-tech-test
 Bundle install.
-Run the text editor.
-The program runs on REPL.
+```
+- The program runs on REPL, such as PRY o IRB
+- In the REPL require Bank Account, Bank Transaction and Bank Statement files
+
+```
+require './lib/bank_account'
+require './lib/bank_statement'
+require './lib/bank_transactions'
 ```
 
-#Tech and test
+# Tech and test
 
-Language: Ruby
-Test: rspec, simplecov
+- Language: Ruby
+- Testing Framework: rspec
+- Test coverage: simplecov
 
 # Classes and methods
 

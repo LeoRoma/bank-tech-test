@@ -1,5 +1,3 @@
-require 'bank_statement'
-
 class BankAccount
 attr_accessor :current_balance
 

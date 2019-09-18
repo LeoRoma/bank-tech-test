@@ -48,6 +48,13 @@ For this program I used 3 classes with the corresponding methods:
 
 # Approach
 
+- To build this application I used consinstently TDD process (Red, Green, Refactor)
+- At the beginning the program was built with only 1 class (BankStatement), later I have realized that was breaking the Single Responsibility Principle. Therefore I started to break the program with extracting the class into 3 classes:
+
+1. BankAccount: holding the current balance of the user
+2. BankTransaction: able to deposit and withdraw an amount of money
+3. BankStatement: has the possibility to add single transaction into the statement and print it.
+
 # Picture of an example in IRB
 
 <img src="./images/Screenshot 2019-09-18 at 10.36.47.png" width="786" height="522">

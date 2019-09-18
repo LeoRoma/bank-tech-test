@@ -6,12 +6,14 @@ This program is able to deposit, withdraw an amount of money, is able to adding 
 
 # How to install
 
+```
 Open your terminal/command line.
-Clone the repository.
-Go into the folder.
-Run the text editor.
+Clone the repository with: git clone https://github.com/LeoRoma/bank-tech-test.git
+Go into the folder: cd bank-tech-test
 Bundle install.
+Run the text editor.
 The program runs on REPL.
+```
 
 #Tech and test
 
@@ -23,7 +25,7 @@ Test: rspec, simplecov
 For this program I used 3 classes with the corresponding methods:
 
 - # BankAccount
-- # current_balance
+- current_balance
 
 - # BankTransaction
 - description
